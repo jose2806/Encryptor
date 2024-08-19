@@ -7,6 +7,15 @@
   overflow: hidden;
 }
 
+:root{
+  --color-primary: #ffffff;
+  --color-secondary: #fe6d3c;
+  --color-tertiary: #b0218f;
+  --color-fourth: #4c005e;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-krona: 'Krona One', sans-serif;
+}
+
 html,
 body {
   height: 100%;
@@ -16,7 +25,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom right, #fe6d3c, #b0218f, #4c005e);
+  background: linear-gradient(to bottom right, var(--color-secondary), var(--color-tertiary), var(--color-fourth));
 }
 
 header {
@@ -34,7 +43,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
 }
 
 .section_container {
@@ -43,13 +51,14 @@ main {
   align-items: stretch;
   width: 100%;
   max-width: 56.25rem; /* Tamaño fijo para el contenedor */
-  height: 37.5rem;
+  height: 37rem;
 }
 
 .title {
   text-align: center;
-  color: #ffffff;
+  color: var(--color-primary);
   margin-bottom: 1.25rem;
+  padding-bottom: 0.125rem;
 }
 
 .request,
@@ -82,16 +91,16 @@ main {
   overflow-y: hidden;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
-  border-color: #ffffff;
+  border-color: var(--color-primary);
 }
 
 .request_text:focus {
-  color: #ffffff;
-  border-color: #ffffff;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .request_text::placeholder {
-  color: #ffffff;
+  color: var(--color-primary);
   opacity: 1; /* Asegura que el color sea completamente opaco */
 }
 
@@ -108,36 +117,36 @@ main {
 }
 
 .copy {
-  background-color: #ffffff;
+  background-color: var(--color-primary);
   color: #000000;
   border: 2px solid #000000;
 }
 
 .copy:hover {
   background-color: #000000;
-  color: #ffffff;
+  color: var(--color-primary);
 }
 
 .encriptar {
-  background-color: #ffffff;
-  color: #4c005e;
-  border: 2px solid #4c005e;
+  background-color: var(--color-primary);
+  color: var(--color-fourth);
+  border: 2px solid var(--color-fourth);
 }
 
 .encriptar:hover {
-  background-color: #4c005e; /* Fondo púrpura oscuro en hover */
+  background-color: var(--color-fourth); /* Fondo púrpura oscuro en hover */
   color: #ffffff;
 }
 
 .desencriptar {
-  background-color: #ffffff;
-  color: #fe6d3c;
-  border: 2px solid #fe6d3c;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
 }
 
 .desencriptar:hover {
-  background-color: #fe6d3c;
-  color: #ffffff;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .result_image {
@@ -153,7 +162,7 @@ main {
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #ffffff;
+  color: var(--color-primary);
 }
 
 .warning {
@@ -176,7 +185,7 @@ main {
   padding: 0.625rem 0;
   margin-top: 0.625rem;
   width: 100%;
-  color: #ffffff;
+  color: var(--color-primary);
 }
 
 /* Media Query para tablets */
