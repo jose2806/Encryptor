@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #fe6d3c, #b0218f, #4c005e);
+}
+
+header {
+  padding: 0.625rem;
+}
+
+.logo {
+  width: 3.125rem;
+  height: auto;
+}
+
+main {
+  flex: 1; /* Se expande para ocupar el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.section_container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 56.25rem; /* Tamaño fijo para el contenedor */
+  height: 37.5rem;
+}
+
+.title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.request,
+.result {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 20px 0px 20px 0px;
+  border-radius: 10px;
+}
+
+.request {
+  max-width: 25rem;
+}
+
+.result {
+  max-width: 18.75rem;
+}
+
+.request_text {
+  margin-bottom: 10px;
+  padding: 0.625rem;
+  width: 100%;
+  min-width: 21.875rem;
+  min-height: 24.375rem;
+  resize: none;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  border-color: #ffffff;
+}
+
+.request_text:focus {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.request_text::placeholder {
+  color: #ffffff;
+  opacity: 1; /* Asegura que el color sea completamente opaco */
+}
+
+.encriptar,
+.desencriptar,
+.copy {
+  padding: 0.625rem 1.25rem;
+  width: 7.5rem; /* Ancho fijo para ambos botones */
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 0.625rem; /* Espacio entre los botones */
+}
+
+.copy {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.copy:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.encriptar {
+  background-color: #ffffff;
+  color: #4c005e;
+  border: 2px solid #4c005e;
+}
+
+.encriptar:hover {
+  background-color: #4c005e; /* Fondo púrpura oscuro en hover */
+  color: #ffffff;
+}
+
+.desencriptar {
+  background-color: #ffffff;
+  color: #fe6d3c;
+  border: 2px solid #fe6d3c;
+}
+
+.desencriptar:hover {
+  background-color: #fe6d3c;
+  color: #ffffff;
+}
+
+.result_image {
+  min-width: 100%; /* Ocupa todo el ancho disponible */
+  min-height: 100%; /* Ocupa todo el alto disponible */
+  object-fit: cover; /* Escala la imagen sin deformarla */
+  border-radius: 0.625rem;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.result_text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.warning {
+  color: #000000;
+  font-size: 0.9rem;
+  margin-top: 0.313rem;
+  margin-bottom: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+.warning img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.313rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.625rem 0;
+  margin-top: 0.625rem;
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Media Query para tablets */
+@media (max-width: 768px) {
+  .section_container {
+    flex-direction: column; /* Cambia la disposición a columnas */
+    height: 100%;
+    padding: 0.625rem; 
+  }
+  .request,
+  .result {
+    max-width: 100%;
+    margin: 0.625rem 0; /* Agrega margen vertical entre secciones */
+  }
+
+  .request_text {
+    min-width: 100%; /* Ocupa el ancho completo */
+  }
+
+  .title {
+    font-size: 1.5em; /* Reduce el tamaño del título */
+    margin-bottom: 0.875rem; /* Reduce el margen inferior */
+  }
+  
+  .result_image {
+    min-height: 12.5rem; /* Reducir la altura mínima */
+    object-fit: contain;
+  }
+}
+
+/* Media Query para celulares */
+@media (max-width: 480px) {
+  .section_container {
+    flex-direction: column;
+    height: 100%;
+    padding: 0.625rem; 
+  }
+
+  .title {
+    font-size: 1.5em; /* Reduce el tamaño del título */
+    margin-bottom: 1rem; 
+  }
+
+  .request,
+  .result {
+    max-width: 100%;
+    margin: 0.625rem 0;
+  }
+
+  .request_text {
+    min-width: 100%;
+  }
+
+  .encriptar,
+  .desencriptar,
+  .copy {
+    width: 6.25rem; /* Reduce el ancho de los botones */
+    padding: 0.5re; 
+    margin-left: 0.313rem; /* Reduce el espacio entre los botones */
+  }
+
+  .result_image {
+    min-height: 12.5rem; /* Reduce la altura mínima de la imagen */
+    object-fit: contain;
+  }
+
+  .footer {
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente del pie de página */
+    padding: 0.313rem 0; 
+  }
+}
